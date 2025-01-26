@@ -1,2 +1,2 @@
 # UMMAN
-UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora
+This repository contains the original Python code for "UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora". The full code will be open-sourced in the future.
