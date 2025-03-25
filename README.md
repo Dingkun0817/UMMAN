@@ -18,8 +18,21 @@ Experiments on five benchmark datasets demonstrate UMMAN’s effectiveness and s
 
 # Proposed Framework
 We propose UMMAN, which constructs an Original-Graph with multiple relations and a Shuffled-Graph for contrastive learning. It leverages a Node Feature Global Integration (NFGI) module and a joint adversarial-hybrid attention loss to enhance representation learning.
-![SDDA_approach](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/UMMAN.jpg)
+![Figure1](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/UMMAN.jpg)
+
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
 # Key Results
+- Better Performance: As shown in Figure 2, UMMAN significantly improves disease classification performance on five datasets, surpassing traditional machine learning and deep learning methods.
 
+![Figure2](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure3.png)
+
+Figure 2: Intuitive comparison of our method with previous work on the five datasets.
+
+- Enhanced Cross-Host Generalization: As shown in Figure 3, UMMAN strengthens the similarity among hosts within the same class while increasing the dissimilarity between different host classes.
+
+![Figure3](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure4.png)
+Figure 3: Graph representation of host correlation before and after UMMAN.
+
+- Stable Performance Across Datasets: As shown in Figure 4, the model performs well on five OTU datasets across a range of weight values, demonstrating its robustness and reliability.
+![Figure4_1](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure5_Cirrhosis_Acc.png)
