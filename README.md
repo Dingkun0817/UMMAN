@@ -18,7 +18,7 @@ Experiments on five benchmark datasets demonstrate UMMAN’s effectiveness and s
 
 # Proposed Framework
 We propose UMMAN, which constructs an Original-Graph with multiple relations and a Shuffled-Graph for contrastive learning. It leverages a Node Feature Global Integration (NFGI) module and a joint adversarial-hybrid attention loss to enhance representation learning.
-![SDDA_approach](https://github.com/Dingkun0817/UMMAN/blob/main/UMMAN.jpg)
+![SDDA_approach](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/UMMAN.jpg)
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
 # Key Results
