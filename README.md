@@ -1,14 +1,16 @@
 # UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora
 Our paper has been accepted for publication in IEEE Transactions on Computational Biology and Bioinformatics.
 
-This repository contains the original Python code for our paper [UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora](https://ieeexplore.ieee.org/abstract/document/10908075). The full code will be open-sourced in the future.
+This repository contains the original Python code for our paper [UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora](https://ieeexplore.ieee.org/abstract/document/10908075). 
 
 # Overview
-Gut microbiome composition is closely linked to human diseases, but predicting diseases from OTU data is challenging due to complex microbial interactions. Existing methods fail to capture these associations across hosts, limiting performance.
+The abundance of intestinal flora is closely related to human diseases, but diseases are not caused by a single gut microbe. Instead, they result from the complex interplay of numerous microbial entities. This intricate and implicit connection among gut microbes poses a significant challenge for disease prediction using abundance information from OTU data.
 
-We propose UMMAN (Unsupervised Multi-Graph Merge Adversarial Network), the first approach integrating Graph Neural Networks (GNNs) for gut microbiome disease prediction.
+We introduce Unsupervised Multi-Graph Merge Adversarial Network (UMMAN), a novel architecture designed to address this challenge. UMMAN can obtain the embeddings of nodes in the Multi-Graph with an unsupervised scenario, effectively learning the multiplex and implicit associations. It is the first approach to integrate Graph Neural Networks (GNNs) for intestinal flora disease prediction.
 
-Experiments on five benchmark datasets demonstrate UMMAN’s effectiveness and stability, providing a scalable solution for microbiome-based disease prediction.
+UMMAN constructs an Original-Graph using multiple relation types and generates a Shuffled-Graph by disrupting the nodes. The model leverages the Node Feature Global Integration (NFGI) module to capture global graph features and employs a joint loss function that combines adversarial loss and hybrid attention loss. This ensures that the real graph embedding aligns closely with the Original-Graph and diverges from the Shuffled-Graph.
+
+Experiments on five benchmark OTU gut microbiome datasets demonstrate the effectiveness and stability of UMMAN, providing a scalable and robust solution for microbiome-based disease prediction.
 
 # Contributions
 - We are the first to apply graph machine learning to disease prediction based on intestinal flora. We propose a novel framework Unsupervised Multi-graph Merge Adversarial Network (UMMAN), which learns the intricate connections among gut microbes of different hosts to guide disease prediction.
@@ -17,22 +19,37 @@ Experiments on five benchmark datasets demonstrate UMMAN’s effectiveness and s
 - Experiments on the benchmark datasets demonstrate that our UMMAN achieves state-of-the-art performance in the disease prediction task of gut microbiota, and also prove that our method is more stable than previous approaches.
 
 # Proposed Framework
-We propose UMMAN, which constructs an Original-Graph with multiple relations and a Shuffled-Graph for contrastive learning. It leverages a Node Feature Global Integration (NFGI) module and a joint adversarial-hybrid attention loss to enhance representation learning.
-![Figure1](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/UMMAN.jpg)
+The architecture of UMMAN is shown in Figure 1, where nodes represent hosts and multiplex indicators are used to construct the Original-Graph based on the similarity between nodes. To enhance the learning of associations, a Shuffled-Graph is introduced by disrupting these relationships. Both graphs are updated by Graph Convolutional Network (GCN), and node embeddings are generated through an attention block. The Node Feature Global Integration (NFGI) descriptor then aggregates these embeddings into a global graph representation. To capture complex relationships among gut microbes across hosts while ensuring alignment with the Original-Graph and divergence from the Shuffled-Graph, we propose a joint loss function that combines adversarial loss and hybrid attention loss.
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN.jpg" alt="Figure1" width="500">
+</div>
 
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
 # Key Results
 - Better Performance: As shown in Figure 2, UMMAN significantly improves disease classification performance on five datasets, surpassing traditional machine learning and deep learning methods.
 
-![Figure2](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure3.png)
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3.png" alt="Figure2" width="400">
+</div>
 
 Figure 2: Intuitive comparison of our method with previous work on the five datasets.
 
 - Enhanced Cross-Host Generalization: As shown in Figure 3, UMMAN strengthens the similarity among hosts within the same class while increasing the dissimilarity between different host classes.
 
-![Figure3](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure4.png)
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure4.png" alt="Figure3" width="500">
+</div>
+
 Figure 3: Graph representation of host correlation before and after UMMAN.
 
 - Stable Performance Across Datasets: As shown in Figure 4, the model performs well on five OTU datasets across a range of weight values, demonstrating its robustness and reliability.
-![Figure4_1](https://github.com/Dingkun0817/UMMAN/blob/main/Figures/Figure5_Cirrhosis_Acc.png)
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure5_Cirrhosis_Acc.png" alt="Figure4_1" width="250"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure5_IBD_AUC.png" alt="Figure4_2" width="250"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure5_Obesity_AUC.png" alt="Figure4_3" width="250">
+</div>
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure5_T2D_Acc.png" alt="Figure4_4" width="250"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure5_WT2D_Acc.png" alt="Figure4_5" width="250">
+</div>
