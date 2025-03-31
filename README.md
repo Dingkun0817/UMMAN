@@ -30,7 +30,7 @@ Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph an
 # Key Results
 - Better Performance: As shown in Figure 2, UMMAN significantly improves disease classification performance on five datasets, surpassing traditional machine learning and deep learning methods.
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3_1.png" alt="Figure3_1" width="440"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3_2.png" alt="Figure3_2" width="440">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3-1.png" alt="Figure3_1" width="440"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3-2.png" alt="Figure3_2" width="440">
 </div>
 <p align="center">
 Figure 2: Intuitive comparison of our method with previous work on the five datasets.
@@ -38,7 +38,7 @@ Figure 2: Intuitive comparison of our method with previous work on the five data
 
 - Enhanced Cross-Host Generalization: As shown in Figure 3, UMMAN strengthens the similarity among hosts within the same class while increasing the dissimilarity between different host classes.
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure4.png" alt="Figure3" width="460">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure4-1.png" alt="Figure3" width="460">
 </div>
 <p align="center">
 Figure 3: Graph representation of host correlation before and after UMMAN.
