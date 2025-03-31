@@ -19,7 +19,9 @@ Experiments on five benchmark OTU gut microbiome datasets demonstrate the effect
 - Experiments on the benchmark datasets demonstrate that our UMMAN achieves state-of-the-art performance in the disease prediction task of gut microbiota, and also prove that our method is more stable than previous approaches.
 
 # Proposed Framework
-The architecture of UMMAN is shown in Figure 1, where nodes represent hosts and multiplex indicators are used to construct the Original-Graph based on the similarity between nodes. To enhance the learning of associations, a Shuffled-Graph is introduced by disrupting these relationships. Both graphs are updated by Graph Convolutional Network (GCN), and node embeddings are generated through an attention block. The Node Feature Global Integration (NFGI) descriptor then aggregates these embeddings into a global graph representation. To capture complex relationships among gut microbes across hosts while ensuring alignment with the Original-Graph and divergence from the Shuffled-Graph, we propose a joint loss function that combines adversarial loss and hybrid attention loss.
+The architecture of UMMAN is shown in Figure 1, where nodes represent hosts and multiplex indicators are used to construct the Original-Graph based on the similarity between nodes. To enhance the learning of associations, a Shuffled-Graph is introduced by disrupting these relationships. Both graphs are updated by Graph Convolutional Network (GCN), and node embeddings are generated through an attention block. 
+
+The Node Feature Global Integration (NFGI) descriptor then aggregates these embeddings into a global graph representation. To capture complex relationships among gut microbes across hosts while ensuring alignment with the Original-Graph and divergence from the Shuffled-Graph, we propose a joint loss function that combines adversarial loss and hybrid attention loss.
 <div align=center>
 <img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_1.jpg" alt="Figure1_1" width="500"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_2.jpg" alt="Figure1_2" width="500">
 </div>
