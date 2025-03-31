@@ -23,7 +23,7 @@ The architecture of UMMAN is shown in Figure 1, where nodes represent hosts and 
 
 The Node Feature Global Integration (NFGI) descriptor then aggregates these embeddings into a global graph representation. To capture complex relationships among gut microbes across hosts while ensuring alignment with the Original-Graph and divergence from the Shuffled-Graph, we propose a joint loss function that combines adversarial loss and hybrid attention loss.
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_1.jpg" alt="Figure1_1" width="500"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_2.jpg" alt="Figure1_2" width="500">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN-1.png" alt="Figure1_1" width="500"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN-2.png" alt="Figure1_2" width="500">
 </div>
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
