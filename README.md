@@ -53,3 +53,19 @@ Figure 3: Graph representation of host correlation before and after UMMAN.
 <p align="center">
 Figure 4: Hyperparameter selection for adversarial loss and hybrid attention loss.
 </p>
+
+## Citation
+
+If you find this work useful, please consider citing our paper:
+
+```bibtex
+@article{liu2025umman,
+  title={Umman: Unsupervised multi-graph merge adversarial network for disease prediction based on intestinal flora},
+  author={Liu, Dingkun and Zhou, Hongjie and Qu, Yilu and Zhang, Huimei and Xu, Yongdong},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics},
+  year={2025},
+  publisher={IEEE}
+}
+
+## Concat
+For any questions or collaborations, please feel free to reach out via d202481536@hust.edu.cn or open an issue in this repository.
