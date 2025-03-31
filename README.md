@@ -20,16 +20,15 @@ Experiments on five benchmark OTU gut microbiome datasets demonstrate the effect
 
 # Proposed Framework
 The architecture of UMMAN is shown in Figure 1, where nodes represent hosts and multiplex indicators are used to construct the Original-Graph based on the similarity between nodes. To enhance the learning of associations, a Shuffled-Graph is introduced by disrupting these relationships. Both graphs are updated by Graph Convolutional Network (GCN), and node embeddings are generated through an attention block. The Node Feature Global Integration (NFGI) descriptor then aggregates these embeddings into a global graph representation. To capture complex relationships among gut microbes across hosts while ensuring alignment with the Original-Graph and divergence from the Shuffled-Graph, we propose a joint loss function that combines adversarial loss and hybrid attention loss.
-
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN.jpg" alt="Figure1" width="460">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_1.jpg" alt="Figure1_1" width="500"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN_2.jpg" alt="Figure1_2" width="500">
 </div>
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
 # Key Results
 - Better Performance: As shown in Figure 2, UMMAN significantly improves disease classification performance on five datasets, surpassing traditional machine learning and deep learning methods.
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3.png" alt="Figure2" width="400">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3_1.png" alt="Figure3_1" width="440"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure3_2.png" alt="Figure3_2" width="440">
 </div>
 <p align="center">
 Figure 2: Intuitive comparison of our method with previous work on the five datasets.
@@ -37,7 +36,7 @@ Figure 2: Intuitive comparison of our method with previous work on the five data
 
 - Enhanced Cross-Host Generalization: As shown in Figure 3, UMMAN strengthens the similarity among hosts within the same class while increasing the dissimilarity between different host classes.
 <div align=center>
-<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure4.png" alt="Figure3" width="400">
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/Figure4.png" alt="Figure3" width="460">
 </div>
 <p align="center">
 Figure 3: Graph representation of host correlation before and after UMMAN.
@@ -66,6 +65,7 @@ If you find this work useful, please consider citing our paper:
   year={2025},
   publisher={IEEE}
 }
+```
 
 ## Concat
 For any questions or collaborations, please feel free to reach out via d202481536@hust.edu.cn or open an issue in this repository.
