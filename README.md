@@ -25,6 +25,9 @@ The Node Feature Global Integration (NFGI) descriptor then aggregates these embe
 <div align=center>
 <img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN-1.png" alt="Figure1_1" width="420"><img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN-2.png" alt="Figure1_2" width="420">
 </div>
+<div align=center>
+<img src="https://raw.githubusercontent.com/Dingkun0817/UMMAN/main/Figures/UMMAN-1.png" alt="Figure1">
+</div>
 Figure 1: (a) Overview of the proposed UMMAN architecture. The Original-Graph and Shuffled-Graph are processed through GCN and fused using an attention block, and the NFGI module captures the global features of the graph. (b) NFGI module with two stages: Node-level and Graph-level. The adversarial comparison between the Original-Graph and Shuffled-Graph is conducted with a joint loss function to enhance the authenticity of learned relationships.
 
 # Key Results
