@@ -1,5 +1,5 @@
 # UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora
-Our paper has been accepted for publication in IEEE Transactions on Computational Biology and Bioinformatics.
+Our paper has been accepted for publication in IEEE Transactions on Computational Biology and Bioinformatics (TCBB)🎉🎉🎉.
 
 This repository contains the original Python code for our paper [UMMAN: Unsupervised Multi-graph Merge Adversarial Network for Disease Prediction Based on Intestinal Flora](https://ieeexplore.ieee.org/abstract/document/10908075). 
 
